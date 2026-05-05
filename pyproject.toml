@@ -1,0 +1,39 @@
+[project]
+name = "medical-rag"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Eunice",email = "euniceamobeaadjei@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "openai (>=2.33.0,<3.0.0)",
+    "llama-index (>=0.14.21,<0.15.0)",
+    "llama-index-vector-stores-pinecone (>=0.8.0,<0.9.0)",
+    "llama-index-embeddings-openai (>=0.6.0,<0.7.0)",
+    "llama-index-llms-openai (>=0.7.7,<0.8.0)",
+    "rank-bm25 (>=0.2.2,<0.3.0)",
+    "fastapi (>=0.136.1,<0.137.0)",
+    "uvicorn[standard] (>=0.46.0,<0.47.0)",
+    "pydantic (>=2.13.3,<3.0.0)",
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "cohere (<6.0.0)",
+    "pinecone (>=7.0.0,<8.0.0)",
+]
+
+[tool.poetry]
+packages = [{include = "medical_rag", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest (>=9.0.3,<10.0.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "pytest-asyncio (>=1.3.0,<2.0.0)",
+    "black (>=26.3.1,<27.0.0)",
+    "ruff (>=0.15.12,<0.16.0)"
+]
