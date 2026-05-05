@@ -3,3 +3,14 @@
 __pycache__/
 *.pyc
 .pytest_cache/
+.idea/
+.vscode/
+venv/
+*.log
+env/
+.git/
+.gitignore
+tests/
+mlruns/
+data/
+*.env
